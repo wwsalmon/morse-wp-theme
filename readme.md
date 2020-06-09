@@ -1,6 +1,6 @@
-# Morse: The Simplest Wordpress Newspaper Theme
+# Morse: WordPress Theme for Small Newspapers
 
-Wordpress can be a mess to use, especially when using it for a newspaper with tons of categories, tags, and authors galore. Often you'll be forced to rely on plugins or big, bloated themes to implement the functionality that you want.
+WordPress can be a mess to use, especially when using it for a newspaper with tons of categories, tags, and authors galore. Often you'll be forced to rely on plugins or big, bloated themes to implement the functionality that you want.
 
 Small papers managing their digital presence deserve better.
 

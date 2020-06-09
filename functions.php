@@ -2,14 +2,21 @@
 
 require('inc/register-menus.php');
 
-require('inc/customize-colors.php');
-
 require('inc/helper-functions.php');
 
-function plip_script_enqueue()
+require('inc/customizer.php');
+
+function morse_wp_template_script_enqueue()
 {
-    wp_enqueue_style('customstyle', get_template_directory_uri() . '/css/master.scss', array(), null, 'all');
-    wp_enqueue_script('customjs', get_template_directory_uri() . '/js/section-dropdown.js', array('jquery'), null, true);
+    wp_enqueue_style('customstyle', get_template_directory_uri() . '/css/master.min.css', false, NULL, 'all' );
+    wp_enqueue_style('google_fonts', 'https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Spectral:ital,wght@0,300;0,400;0,700,800;1,300;1,400;1,700&display=swap', false, NULL, 'all' );
+    wp_enqueue_style('fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css', false, NULL, 'all' );
 }
 
-add_action('wp_enqueue_scripts', 'plip_script_enqueue');
+add_action('wp_enqueue_scripts', 'morse_wp_template_script_enqueue');
+
+function remove_admin_bar() {
+    show_admin_bar(false);
+}
+
+add_action('after_setup_theme', 'remove_admin_bar');

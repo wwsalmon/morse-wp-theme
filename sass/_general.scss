@@ -1,4 +1,28 @@
 body{
-  margin: 0;
+  margin: $sz-navbar-height 0 0 0; // show below navbar
+  overflow-x: hidden;
+  font-family: 'Rubik'; // change to whatever font you bring in
+  font-size: 20px;
 }
 
+a{
+  color: blue;
+  text-decoration: unset;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@mixin container{
+  max-width: $main-width;
+  box-sizing: border-box;
+  padding: 0 24px;
+  margin: 0 auto;
+}
+
+.container{
+  @include container;
+}

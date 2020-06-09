@@ -1,2 +1,7 @@
+$main-width: 1500px;
+$content-width: 800px;
+
+@import 'sz-navbar';
 @import 'general';
-@import 'article';
+@import 'navbar';
+@import 'content';

@@ -1,0 +1,128 @@
+// IN SASS, OVERRIDE THESE VARIABLES WITH YOUR OWN. IF PLAIN CSS, IGNORE THIS COMMENT
+$sz-navbar-breakpoint: 600px !default;
+$sz-navbar-transition-time: 0.2s !default;
+$sz-navbar-height: 64px !default;
+$sz-navbar-bg-color: #fff !default;
+$sz-navbar-items-bg-color: #eee !default;
+$sz-navbar-hamburger-margin: 24px !default;
+$sz-navbar-item-margin-hor: 8px !default;
+$sz-navbar-item-margin-vert: 8px !default;
+$sz-navbar-inner-width: 1200px !default; // TO SPAN FULL SCREEN, SET TO 100%
+
+.sz-navbar{
+    width: 100%;
+    height: $sz-navbar-height; /* OVERRIDE WITH YOUR OWN HEIGHT */
+    background-color: $sz-navbar-bg-color; /* OVERRIDE WITH YOUR OWN BG COLOR */
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.sz-navbar-inner{
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    box-sizing: border-box;
+    z-index: 5;
+}
+
+.sz-navbar-items{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#sz-navbar-check{
+    display: none;
+}
+
+@media (min-width: $sz-navbar-breakpoint){
+    .sz-navbar-inner{
+        max-width: $sz-navbar-inner-width;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .sz-navbar-hamburger{
+        display: none;
+    }
+
+    .sz-navbar-right{
+        .sz-navbar-items{
+            margin-left: auto;
+
+            .sz-navbar-item{
+                margin-left: $sz-navbar-item-margin-hor;
+            }
+        }
+    }
+
+    .sz-navbar-left{
+        .sz-navbar-item{
+            margin-right: $sz-navbar-item-margin-hor;
+        }
+    }
+}
+
+@media (max-width: $sz-navbar-breakpoint){
+    .sz-navbar-inner{
+        justify-content: center;
+    }
+
+    .sz-navbar-items{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: $sz-navbar-items-bg-color; /* OVERRIDE WITH YOUR OWN MENU BG COLOR */
+        flex-flow: column nowrap;
+        justify-content: center;
+    }
+
+    .sz-navbar-hamburger{
+        position: absolute;
+        z-index: 6;
+
+        // CENTERING VERTICALLY IN NAVBAR
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .sz-navbar-left{
+        .sz-navbar-items{
+            left: 0;
+            margin-left: -100%;
+            transition: margin-left $sz-navbar-transition-time ease;
+        }
+
+        #sz-navbar-check:checked ~ .sz-navbar-items{
+            margin-left: 0;
+        }
+
+        .sz-navbar-hamburger{
+            left: $sz-navbar-hamburger-margin; /* OVERRIDE WITH YOUR OWN HAMBURGER BUTTON MARGIN */
+        }
+    }
+
+    .sz-navbar-right{
+        .sz-navbar-items{
+            right: 0;
+            margin-right: -100%;
+            transition: margin-right $sz-navbar-transition-time ease;
+        }
+
+        #sz-navbar-check:checked ~ .sz-navbar-items{
+            margin-right: 0;
+        }
+
+        .sz-navbar-hamburger{
+            right: $sz-navbar-hamburger-margin; /* OVERRIDE WITH YOUR OWN HAMBURGER BUTTON MARGIN */
+        }
+    }
+
+    div.sz-navbar-item:not(:last-of-type){
+        margin-bottom: $sz-navbar-item-margin-vert;
+    }
+}

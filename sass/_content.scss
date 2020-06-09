@@ -1,0 +1,15 @@
+.content-container{
+  p, ul, ol, blockquote, h2, h3, h4, h5, h6{
+    max-width: $content-width;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  p, ul, ol, blockquote{
+    line-height: 1.5;
+  }
+
+  blockquote{
+    padding-left: 2em;
+  }
+}
