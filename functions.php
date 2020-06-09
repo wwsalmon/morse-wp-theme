@@ -6,6 +6,8 @@ require('inc/helper-functions.php');
 
 require('inc/customizer.php');
 
+require('inc/tgm-plugin-activation.php');
+
 function morse_wp_template_script_enqueue()
 {
     wp_enqueue_style('customstyle', get_template_directory_uri() . '/css/master.min.css', false, NULL, 'all' );
