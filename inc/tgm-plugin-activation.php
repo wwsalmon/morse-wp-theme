@@ -35,7 +35,15 @@ function morse_wp_theme_register_required_plugins() {
             'name'      => 'Media Credit',
             'slug'      => 'media-credit',
             'required'  => true,
+        ),
+
+        array(
+            'name'      => 'Morse WordPress Theme Settings Plugin',
+            'slug'      => 'morse-wp-plugin',
+            'required'  => true,
+            'source' => "https://github.com/wwsalmon/morse-wp-plugin/archive/master.zip"
         )
+
     );
 
     /*
