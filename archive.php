@@ -16,6 +16,10 @@
 			?>
         </div>
         <div class="home-right">
+	        <?php if (is_active_sidebar("home_right")){
+		        dynamic_sidebar("home_right");
+	        }
+	        ?>
         </div>
     </div>
 <?php
