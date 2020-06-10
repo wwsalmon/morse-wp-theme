@@ -1,10 +1,6 @@
 <?php
 
-require('inc/register-menus.php');
-
 require('inc/helper-functions.php');
-
-require('inc/customizer.php');
 
 require('inc/tgm-plugin-activation.php');
 
