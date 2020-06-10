@@ -31,11 +31,12 @@ if ($navbar_line == "primary"){
 }
 ?>
 <div class="sz-navbar morse-wp-template-navbar <?php echo $navbar_class ?>">
-    <div class="sz-navbar-inner sz-navbar-right">
+    <div class="sz-navbar-inner sz-navbar-right container">
         <div class="navbar-logo"><a href="<?php echo get_home_url() ?>"><img src="<?php echo get_theme_mod($navbar_logo) ?>"></a></div>
         <div class="navbar-tagline"><span><?php echo get_theme_mod("morse-wp-navbar-tagline") ?></span></div>
         <input type="checkbox" id="sz-navbar-check">
         <label for="sz-navbar-check" class="sz-navbar-hamburger">☰</label>
+        <div class="morse-wp-template-navbar-line <?php echo $line_class ?>"></div>
         <div class="sz-navbar-items">
             <?php
             foreach (get_menu_items_by_registered_slug("navbar") as $item){
@@ -43,6 +44,5 @@ if ($navbar_line == "primary"){
             }
             ?>
         </div>
-        <div class="morse-wp-template-navbar-line <?php echo $line_class ?>"></div>
     </div>
 </div>

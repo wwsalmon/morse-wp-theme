@@ -14,19 +14,26 @@ img{
   display: block;
 }
 
-@mixin container{
+.container{
   max-width: $main-width;
   box-sizing: border-box;
   padding: 0 24px;
   margin: 0 auto;
 }
 
-.container{
-  @include container;
+.uppercase-link{
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 .lede-story{
   padding-top: 24px;
+
+  h3 a{
+    color: #000;
+    line-height: 1.1;
+  }
 }
 
 .article-item{
@@ -44,6 +51,10 @@ img{
   h3{
     line-height: 1.1;
     font-size: 20px;
+
+    a{
+      color: #000;
+    }
   }
 }
 
@@ -51,6 +62,12 @@ img{
   width: 100%;
   height: 4px;
   margin-bottom: 24px;
+}
+
+@media (min-width: 600px){
+  .lede-story h3 a{
+    font-size: 36px;
+  }
 }
 
 @media (min-width: 600px) and (max-width: 900px), (min-width: 1200px){
@@ -83,12 +100,6 @@ img{
     display: grid;
     grid-template-columns: 1fr 400px;
 
-    h3 a{
-      font-size: 36px;
-      color: #000;
-      line-height: 1.1;
-    }
-
     .lede-right{
       padding-left: 24px;
       display: flex;
@@ -101,5 +112,9 @@ img{
     margin: 24px 0;
     padding-right: 24px;
     border-right: 1px solid rgba(0,0,0,0.2);
+
+    .article-item h3{
+      font-size: 24px;
+    }
   }
 }
