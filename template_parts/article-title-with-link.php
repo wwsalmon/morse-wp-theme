@@ -1,0 +1,1 @@
+<h3 class="morse-font-heading"><a href="<?php echo get_the_permalink() ?>"><?php the_title() ?></a></h3>

@@ -1,5 +1,35 @@
 .morse-wp-template-navbar{
+  position: sticky;
+
   .sz-navbar-inner{
     @include container;
+  }
+
+  .navbar-logo{
+    height: 24px;
+  }
+
+  .navbar-logo img{
+    height: 100%;
+  }
+
+  .navbar-tagline{
+    font-style: italic;
+    display: none;
+  }
+
+  .morse-wp-template-navbar-line{
+    position: absolute;
+    left: 24px;
+    right: 24px;
+    bottom: -4px;
+    height: 4px;
+  }
+}
+
+@media (min-width: 600px){
+  .morse-wp-template-navbar .navbar-tagline{
+    display: block;
+    margin-left: 24px;
   }
 }
