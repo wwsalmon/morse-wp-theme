@@ -1,4 +1,4 @@
-<div class="article-item">
+<div class="article-item border-bottom">
     <div class="article-left">
 	    <?php
         get_template_part("template_parts/article-tags-and-categories");
