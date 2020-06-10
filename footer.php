@@ -33,6 +33,11 @@ if ($footer_line == "primary"){
         </div>
 	</div>
 </footer>
+<div class="post-footer">
+    <div class="post-footer-inner container">
+        <p>This website uses <a href="https://github.com/wwsalmon/morse-wp-theme">Morse</a>, a WordPress theme custom made for small newspapers by <a href="https://www.samsonzhang.com/">Samson Zhang</a>.</p>
+    </div>
+</div>
 </body>
 </html>
 <?php

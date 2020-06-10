@@ -56,3 +56,23 @@ footer{
     }
   }
 }
+
+.post-footer{
+  background-color: #222;
+  color: #fff;
+  font-size: 16px;
+  padding: 16px 0;
+
+  .post-footer-inner{
+    opacity: 0.4;
+  }
+
+  p{
+    margin: 0;
+  }
+
+  a{
+    color: #fff;
+    text-decoration: underline;
+  }
+}
