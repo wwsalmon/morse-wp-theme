@@ -29,14 +29,20 @@ img{
 }
 
 .article-item, .lede-story{
-  h3 a{
-    color: #000;
+  h3{
     line-height: 1.1;
+    a{
+      color: #000;
+    }
   }
 }
 
 .lede-story{
   padding-top: 24px;
+}
+
+.lede-left{
+  margin-bottom: 24px;
 }
 
 .article-item{
@@ -52,9 +58,7 @@ img{
   }
 
   h3{
-    a{
-      font-size: 20px;
-    }
+    font-size: 20px;
     margin: 8px 0 16px 0;
   }
 }
@@ -74,7 +78,7 @@ img{
 }
 
 @media (min-width: 600px){
-  .lede-story h3 a{
+  .lede-story h3{
     font-size: 36px;
   }
 }
@@ -115,6 +119,10 @@ img{
       flex-flow: column nowrap;
       justify-content: center;
     }
+
+    .lede-left{
+      margin-bottom: 0;
+    }
   }
 
   .stories-container{
@@ -122,7 +130,7 @@ img{
     padding-right: 24px;
     border-right: 1px solid rgba(0,0,0,0.2);
 
-    .article-item h3 a{
+    .article-item h3{
       font-size: 24px;
     }
   }
