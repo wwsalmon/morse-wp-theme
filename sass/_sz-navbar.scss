@@ -16,6 +16,7 @@ $sz-navbar-inner-width: 1200px !default; // TO SPAN FULL SCREEN, SET TO 100%
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 5;
 }
 
 .sz-navbar-inner{

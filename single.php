@@ -1,15 +1,18 @@
 <?php get_header();
 ?>
-    <div class="container content-container single-container">
-        <?php
-        while (have_posts()) : the_post(); ?>
-            <h1><?php the_title(); ?></h1>
-            <div class="single-date"><?php echo the_date("F d, Y"); ?></div>
-            <div class="single-author"><span><?php echo sz_author_with_link(get_the_author_meta("ID")); ?></span></div>
-            <?php
-            the_content();
-        endwhile;
-        ?>
+    <div class="container">
+        <div class="single-container">
+	        <?php
+	        while (have_posts()) :
+		        the_post();
+		        get_template_part("template_parts/article-tags-and-categories"); ?>
+                <h1 class="morse-font-heading"><?php the_title(); ?></h1>
+		        <?php
+		        get_template_part("template_parts/article-date-and-author");
+		        echo "<div class=\"content-container\">" . do_shortcode(get_the_content()) . "</div>";
+	        endwhile;
+	        ?>
+        </div>
     </div>
 <?php
 get_footer();
