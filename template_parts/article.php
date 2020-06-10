@@ -1,17 +1,9 @@
 <div class="article-item">
     <div class="article-left">
 	    <?php
-	    get_template_part("template_parts/article-title-with-link");
+        get_template_part("template_parts/article-tags-and-categories");
 
-//	    if (sizeof(get_the_category()) > 0) {
-//		    echo "<div class=\"article-categories\">";
-//		    foreach (get_the_category() as $cat) {
-//			    ?>
-<!--                <div class="article-category"><span><a href="--><?php //echo get_category_link($cat) ?><!--">--><?php //echo $cat->name ?><!--</a></span></div>-->
-<!--			    --><?php
-//		    }
-//		    echo "</div>";
-//	    }
+	    get_template_part("template_parts/article-title-with-link");
 
 	    get_template_part("template_parts/article-date-and-author");
 	    ?>
