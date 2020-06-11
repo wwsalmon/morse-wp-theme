@@ -34,6 +34,10 @@ img{
   margin-bottom: 24px;
 }
 
+h1, h2, h3{
+  line-height: 1.1;
+}
+
 .pb-1{
   padding-bottom: 8px;
 }
@@ -94,13 +98,16 @@ img{
   margin-top: 48px;
 }
 
+.align-right{
+  text-align: right;
+}
+
 div.border-bottom:last-of-type{
   margin-bottom: 0;
 }
 
 .article-item, .lede-story{
   h3{
-    line-height: 1.1;
     a{
       color: #000;
     }
