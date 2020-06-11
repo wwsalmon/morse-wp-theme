@@ -10,8 +10,8 @@
 	            if ( $post_count == 1 ) {
 		            get_template_part( "template_parts/lede-story" );
 	                ?>
-                    <div class="full-header morse-font-accent morse-color-primary">
-                        <h1>Latest</h1>
+                    <div class="full-header">
+                        <h1 class="morse-font-accent morse-color-primary mb-2">Latest</h1>
                         <div class="full-divider morse-bg-accent"></div>
                     </div>
                     <div class="stories-container">
